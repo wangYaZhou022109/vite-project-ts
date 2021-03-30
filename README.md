@@ -1,6 +1,10 @@
-# Vue 3 + Typescript + Vite
+# Vite-Vue-Template
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.
+
+## Template Description
+
+vite2 + vue3 + vuex + vue-router + typescript + ant-design-vue + mockjs
 
 ## Recommended IDE Setup
 
@@ -23,5 +27,29 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
 2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
 3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
+4. Open the VSCode command palette 5. Search and run "Select TypeScript version" -> "Use workspace version"
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn run dev
+```
+
+### Compiles and minifies for production
+```
+yarn run build
+```
+
+### Run your tests
+```
+yarn run test
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```

@@ -1,15 +1,25 @@
 <template>
-  <router-view :myRoute="router"/>
+  <a-config-provider :locale="locale">
+    <router-view />
+  </a-config-provider>
 </template>
 
 <script lang="ts">
-import router from './router'
-import { defineComponent, provide } from 'vue'
+import { defineComponent, onBeforeMount } from 'vue'
+import zhCN from 'ant-design-vue/es/locale/zh_CN'
+import { useStore } from '@/store'
 export default defineComponent({
   name: 'App',
   setup() {
-    provide('Route', router)
-    return {router }
+    const store = useStore()
+    onBeforeMount(async () => {
+      await store.dispatch('SSO/getToken')
+      store.dispatch('SSO/getPermissions')
+      store.dispatch('SSO/getUserInfo')
+    })
+    return { locale: zhCN }
   }
 })
 </script>
+
+<style></style>

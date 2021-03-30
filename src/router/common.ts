@@ -1,5 +1,4 @@
 const Layout = () => import('../components/layout/index.vue')
-
 export default [
   {
     path: '/403',
@@ -11,7 +10,7 @@ export default [
       {
         path: '',
         name: '403',
-        component: () => import('../components/403/index.vue')
+        component: () => import('@/components/403/index.vue')
       }
     ]
   },
@@ -25,7 +24,7 @@ export default [
       {
         path: '',
         name: '404',
-        component: () => import('../components/404/index.vue')
+        component: () => import('@/components/404/index.vue')
       }
     ]
   }
